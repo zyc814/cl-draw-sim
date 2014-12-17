@@ -34,6 +34,7 @@ public class start extends Application {
 		root.setCenter(tabPane);
 		
 		Scene scene = new Scene(root,750,550);
+		scene.getStylesheets().add("res/style.css");
 		primaryStage.setTitle("UEFA Champions League Draw Simulator");
         primaryStage.setScene(scene);
         primaryStage.show();

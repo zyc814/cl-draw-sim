@@ -1,7 +1,6 @@
 package ui;
 
 import java.io.File;
-
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.Tab;
@@ -9,6 +8,14 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.TilePane;
+
+/**
+ * A tab that contains a tilePane 
+ * to show all teams in a certain league
+ * 
+ * @author YUCHZOU
+ *
+ */
 
 public class LeagueTab {
 	
@@ -20,7 +27,7 @@ public class LeagueTab {
 	public LeagueTab(String str) {
 		nation = str;
 		tab.setText(str);
-		tilePane.setStyle("-fx-background-color: #A8A8A8");
+		tilePane.getStyleClass().add("body-style");
 	}
 
 	public void buildLeaguePane() {
