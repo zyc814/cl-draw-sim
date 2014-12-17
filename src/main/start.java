@@ -23,18 +23,17 @@ public class start extends Application {
 		
 		BorderPane root = new BorderPane();
 		
+		// Build tabs
 		TabPane tabPane = new TabPane();
-		
 		LeagueTab tab1 = new LeagueTab("GER");
 		tab1.buildLeaguePane();
 		LeagueTab tab2 = new LeagueTab("ESP");
-
 		tabPane.getTabs().addAll(tab1.getVisual());
 		
 		root.setCenter(tabPane);
 		
 		Scene scene = new Scene(root,750,550);
-		scene.getStylesheets().add("res/style.css");
+		//scene.getStylesheets().add("res/style.css");
 		primaryStage.setTitle("UEFA Champions League Draw Simulator");
         primaryStage.setScene(scene);
         primaryStage.show();
