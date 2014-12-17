@@ -1,6 +1,7 @@
 package main;
 
 import ui.LeagueTab;
+import ui.SelectedPane;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -29,8 +30,12 @@ public class start extends Application {
 		tab1.buildLeaguePane();
 		LeagueTab tab2 = new LeagueTab("ESP");
 		tabPane.getTabs().addAll(tab1.getVisual());
+		// Selected panel
+		SelectedPane selPane = new SelectedPane();
+		selPane.build();
 		
 		root.setCenter(tabPane);
+		root.setRight(selPane.getVisual());
 		
 		Scene scene = new Scene(root,750,550);
 		//scene.getStylesheets().add("res/style.css");
