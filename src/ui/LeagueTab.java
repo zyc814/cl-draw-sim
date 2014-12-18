@@ -27,7 +27,7 @@ public class LeagueTab {
 	public LeagueTab(String str) {
 		nation = str;
 		tab.setText(str);
-		tilePane.setStyle(ColorStyle.DARK_BLACK);
+		tilePane.getStyleClass().add("body-style");
 	}
 
 	public void buildLeaguePane() {

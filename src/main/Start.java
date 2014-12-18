@@ -13,7 +13,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
-public class start extends Application {
+public class Start extends Application {
 
 	public static void main(String[] args) {
 		launch(args);
@@ -38,7 +38,7 @@ public class start extends Application {
 		root.setRight(selPane.getVisual());
 		
 		Scene scene = new Scene(root,750,550);
-		//scene.getStylesheets().add("res/style.css");
+		scene.getStylesheets().add("/style.css");
 		primaryStage.setTitle("UEFA Champions League Draw Simulator");
         primaryStage.setScene(scene);
         primaryStage.show();
