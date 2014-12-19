@@ -1,0 +1,12 @@
+.body-style {
+	-fx-background-color: #202020;
+	-fx-border-color: #333333;
+}
+
+.teambox-style {
+	-fx-background-color: #303030;
+}
+
+.teambox-label {
+	-fx-text-fill: white;
+}

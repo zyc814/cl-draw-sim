@@ -2,6 +2,8 @@ package ui;
 
 import java.io.File;
 
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
@@ -51,20 +53,24 @@ public class LeagueTab {
 		File icon[] = iconFolder.listFiles(); 
 		
 		for (int i=0; i<icon.length; i++) {
+			// icon path and file name
+			String name[] = icon[i].getName().split(".png");
+			// exclude .DS Store file in Mac OS
+			if (name[0].contains("DS_Store")) {
+				continue;
+			}
 			// team box components
 			HBox hbox = new HBox();
-			Label label = new Label();
+			final Label label = new Label();
 			ImageView imgView = new ImageView();
-			Button button = new Button("+");
-			// icon path
-			String name[] = icon[i].getName().split(".png");
-			label.setText(name[0]);
+			final Button button = new Button("+");
 			// load icon images
-			Image img = new Image("file:res/" + nation + "/" + icon[i].getName());
+			final Image img = new Image("file:res/" + nation + "/" + icon[i].getName());
 			imgView.setImage(img);
 			imgView.setFitHeight(40);
 			imgView.setPreserveRatio(true);
 			// Label setup
+			label.setText(name[0]);
 			label.setMaxWidth(Double.MAX_VALUE);
 			label.setFont(new Font("Arial", 17));
 			label.getStyleClass().add("teambox-label");
@@ -78,7 +84,17 @@ public class LeagueTab {
 			hbox.getStyleClass().add("teambox-style");
 			
 			// define button operation
-			
+			button.setOnAction(new EventHandler<ActionEvent>() {
+
+				@Override
+				public void handle(ActionEvent arg0) {
+					button.setDisable(true);
+					label.setDisable(true);
+					SelectedPane.label.setText("Selected Teams: " + ++SelectedPane.count);
+					SelectedPane.addTeam(label.getText(),img, button, label);
+				}
+				
+			});
 			
 			
 			
