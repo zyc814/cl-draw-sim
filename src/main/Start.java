@@ -30,7 +30,18 @@ public class Start extends Application {
 		tab1.buildLeaguePane();
 		LeagueTab tab2 = new LeagueTab("ENG");
 		tab2.buildLeaguePane();
-		tabPane.getTabs().addAll(tab1.getVisual(), tab2.getVisual());
+		LeagueTab tab3 = new LeagueTab("ITA");
+		tab3.buildLeaguePane();
+		LeagueTab tab4 = new LeagueTab("ESP");
+		tab4.buildLeaguePane();
+		LeagueTab tab5 = new LeagueTab("EUR1");
+		tab5.buildLeaguePane();
+		LeagueTab tab6 = new LeagueTab("EUR2");
+		tab6.buildLeaguePane();
+		
+		
+		tabPane.getTabs().addAll(tab1.getVisual(), tab2.getVisual(), tab3.getVisual(), tab4.getVisual());
+		tabPane.getTabs().addAll(tab5.getVisual(), tab6.getVisual());
 		// Selected panel
 		SelectedPane selPane = new SelectedPane();
 		selPane.build();
