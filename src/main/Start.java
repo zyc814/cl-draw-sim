@@ -28,8 +28,9 @@ public class Start extends Application {
 		TabPane tabPane = new TabPane();
 		LeagueTab tab1 = new LeagueTab("GER");
 		tab1.buildLeaguePane();
-		LeagueTab tab2 = new LeagueTab("ESP");
-		tabPane.getTabs().addAll(tab1.getVisual());
+		LeagueTab tab2 = new LeagueTab("ENG");
+		tab2.buildLeaguePane();
+		tabPane.getTabs().addAll(tab1.getVisual(), tab2.getVisual());
 		// Selected panel
 		SelectedPane selPane = new SelectedPane();
 		selPane.build();
@@ -37,7 +38,7 @@ public class Start extends Application {
 		root.setCenter(tabPane);
 		root.setRight(selPane.getVisual());
 		
-		Scene scene = new Scene(root,750,550);
+		Scene scene = new Scene(root,900,750);
 		scene.getStylesheets().add("/style.css");
 		primaryStage.setTitle("UEFA Champions League Draw Simulator");
         primaryStage.setScene(scene);
