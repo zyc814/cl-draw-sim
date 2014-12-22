@@ -83,15 +83,10 @@ public class SelectedPane {
 				btn.setDisable(false);
 				SelectedPane.label.setText("Selected Teams: " + --count);
 				vbox.getChildren().removeAll(hbox);
-				
 			}
 			
 		});
 			
-	}
-	
-	public static void removeTeam() {
-		
 	}
 
 }

@@ -1,5 +1,6 @@
 package main;
 
+import ui.BottomPane;
 import ui.LeagueTab;
 import ui.SelectedPane;
 import javafx.application.Application;
@@ -45,9 +46,13 @@ public class Start extends Application {
 		// Selected panel
 		SelectedPane selPane = new SelectedPane();
 		selPane.build();
+		// Bottom Panel
+		BottomPane bottomPane = new BottomPane();
+		bottomPane.build();
 		
 		root.setCenter(tabPane);
 		root.setRight(selPane.getVisual());
+		root.setBottom(bottomPane.getVisual());
 		
 		Scene scene = new Scene(root,900,750);
 		scene.getStylesheets().add("/style.css");
