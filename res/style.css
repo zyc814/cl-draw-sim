@@ -5,8 +5,8 @@
 
 .teambox-style {
 	-fx-background-color: #303030;
-	-fx-border-radius: 5;
-	-fx-border-color: #383838;	
+	-fx-border-color: #383838;
+	-fx-border-radius: 5;	
 }
 
 .teambox-label {
