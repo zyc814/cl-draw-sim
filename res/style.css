@@ -7,9 +7,28 @@
 	-fx-background-color: #303030;
 	-fx-border-color: #383838;
 	-fx-border-radius: 5;	
+	-fx-border-color: #606060;
 }
 
 .teambox-label {
+	-fx-text-fill: white;
+}
+
+.teambox-button {
+	-fx-background-color: #282828;
+	-fx-border-color: #C0C0C0;
+	-fx-text-fill: white;
+	-fx-border-radius: 5;
+}
+
+.teambox-button:hover {
+	-fx-border-color: #00BFFF;
+	-fx-text-fill: #00BFFF;
+}
+
+.teambox-button:pressed {
+	-fx-background-color: #00BFFF;
+	-fx-border-color: black;
 	-fx-text-fill: white;
 }
 
@@ -18,4 +37,12 @@
 	-fx-border-color: #C0C0C0;
 	-fx-text-fill: white;
 	-fx-border-radius: 5;
+}
+
+.button-style:hover {
+	-fx-text-fill: #00BFFF;
+}
+
+.button-style:pressed {
+	-fx-background-color: white;
 }

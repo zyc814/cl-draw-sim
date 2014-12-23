@@ -1,5 +1,8 @@
 package ui;
 
+import main.Start;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
@@ -41,6 +44,15 @@ public class BottomPane {
 		hbox.getChildren().addAll(hbox2, btnNext);
 		hbox.getStyleClass().add("body-style");
 		
+		// define button actions
+		btnNext.setOnAction(new EventHandler<ActionEvent>() {
+
+			@Override
+			public void handle(ActionEvent arg0) {
+				Start.onNextBtn();
+			}
+			
+		});
 
 	}
 	

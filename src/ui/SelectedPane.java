@@ -75,6 +75,7 @@ public class SelectedPane {
 		vbox.getChildren().add(hbox);
 		
 		// define button action
+		button.getStyleClass().add("teambox-button");
 		button.setOnAction(new EventHandler<ActionEvent>() {
 
 			@Override

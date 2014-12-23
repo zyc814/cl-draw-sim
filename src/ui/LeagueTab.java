@@ -84,6 +84,7 @@ public class LeagueTab {
 			hbox.getStyleClass().add("teambox-style");
 			
 			// define button operation
+			button.getStyleClass().add("teambox-button");
 			button.setOnAction(new EventHandler<ActionEvent>() {
 
 				@Override
