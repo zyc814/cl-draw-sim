@@ -46,3 +46,15 @@
 .button-style:pressed {
 	-fx-background-color: white;
 }
+
+.groupbox-style {
+	-fx-background-color: black;
+}
+
+.groupbox-label {
+	-fx-text-fill: white;
+}
+
+.groupbox-separator .line{
+	-fx-border-color: silver;
+}

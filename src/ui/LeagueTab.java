@@ -8,6 +8,7 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.control.Tab;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -29,7 +30,7 @@ public class LeagueTab {
 	public Tab tab = new Tab();
 	public TilePane tilePane = new TilePane();
 	public String nation;
-	
+	public ScrollPane scrPane = new ScrollPane();
 	
 	public LeagueTab(String str) {
 		nation = str;
@@ -103,12 +104,15 @@ public class LeagueTab {
 			hbox.getChildren().addAll(button, label, imgView);
 			tilePane.getChildren().add(hbox);
 			
-		}
-		
+		} // for loop
 	}
 	
 	public Tab getVisual() {
-		tab.setContent(tilePane);;
+		// scroll panel setup
+		scrPane.setContent(tilePane);
+		scrPane.setFitToWidth(true);
+		
+		tab.setContent(scrPane);
 		return tab;
 	}
 	

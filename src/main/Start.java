@@ -18,8 +18,8 @@ import javafx.stage.Stage;
 public class Start extends Application {
 	
 	public static BorderPane root = new BorderPane();
-	public TabPane tabPane = new TabPane();
-	public SelectedPane selPane = new SelectedPane();
+	public static TabPane tabPane = new TabPane();
+	public static SelectedPane selPane = new SelectedPane();
 	public BottomPane bottomPane = new BottomPane();
 	public static GroupPane groupPane = new GroupPane();
 
@@ -59,7 +59,7 @@ public class Start extends Application {
 		root.setBottom(bottomPane.getVisual());
 		
 		// scene setup
-		Scene scene = new Scene(root,900,750);
+		Scene scene = new Scene(root,900,550);
 		scene.getStylesheets().add("/style.css");
 		
 		// stage setup
@@ -69,6 +69,11 @@ public class Start extends Application {
 		
 	}
 	
+	public static void onBackBtn() {
+		root.setCenter(tabPane);
+		root.setRight(selPane.getVisual());
+		
+	}
 	public static void onNextBtn() {
 		root.setRight(null);
 		root.setCenter(groupPane.getVisual());
