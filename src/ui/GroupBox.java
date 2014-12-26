@@ -19,7 +19,6 @@ public class GroupBox {
 		label.setText("Group " + str);
 		label.setPrefHeight(30);
 		label.getStyleClass().add("teambox-label");
-		//sep.getStyleClass().add("groupbox-separator");
 		
 		vbox.setPrefWidth(225);
 		vbox.setPrefHeight(200);

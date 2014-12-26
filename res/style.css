@@ -55,6 +55,85 @@
 	-fx-text-fill: white;
 }
 
-.groupbox-separator .line{
-	-fx-border-color: silver;
+
+/******************************************************************************
+ * Scrollbar
+ *****************************************************************************/
+
+.scroll-bar:horizontal .track, .scroll-bar:vertical .track {
+ -fx-background-color: #1a1a1a;
+ -fx-border-color: transparent;
+ -fx-background-radius: 0em;
+ -fx-border-radius: 2em;
+}
+
+.scroll-bar:horizontal .increment-button, .scroll-bar:horizontal .decrement-button {
+ -fx-background-color: transparent;
+ -fx-background-radius: 0em;
+ -fx-padding: 0 0 0.75em 0;
+}
+
+.scroll-bar:vertical .increment-button, .scroll-bar:vertical .decrement-button {
+	 -fx-background-color: transparent;
+	 -fx-background-radius: 0em;
+	 -fx-padding: 0 0.75em 0 0;
+}
+
+.scroll-bar .increment-arrow, .scroll-bar .decrement-arrow {
+	 -fx-shape: " ";
+	 -fx-padding:0;
+}
+
+.scroll-bar:horizontal .thumb, .scroll-bar:vertical .thumb {
+	 -fx-background-color: #383838;
+	 -fx-background-insets: 2, 0, 0;
+	 -fx-background-radius: 2em;
+}
+
+
+/******************************************************************************
+ * TabPane
+ *****************************************************************************/
+
+.tab-pane:top *.tab-header-area {
+    -fx-background-insets: 0, 0 0 1 0;
+ /* -fx-padding: 0.416667em 0.166667em 0.0em 0.833em; /* 5 2 0 10 */
+    -fx-padding: 0.416667em 0.166667em 0.0em 0.0em; /* overriden as 5 2 0 0 */
+    -fx-background-color: #202020;
+}
+
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-opacity: 0;
+}
+
+.tab-pane
+{
+    -fx-tab-min-width:87px;
+}
+
+.tab{
+    -fx-background-insets: 0 1 0 1,0,0;
+}
+
+.tab-pane .tab
+{
+    -fx-background-color: #e6e6e6;
+
+}
+
+.tab-pane .tab:selected
+{
+    -fx-background-color: #505050;
+}
+
+.tab .tab-label { 
+    -fx-alignment: CENTER;
+    -fx-text-fill: #828282;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.tab:selected .tab-label { 
+    -fx-alignment: CENTER;
+    -fx-text-fill: white;
 }

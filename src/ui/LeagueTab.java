@@ -2,6 +2,7 @@ package ui;
 
 import java.io.File;
 
+import main.PropData;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
@@ -96,13 +97,12 @@ public class LeagueTab {
 					SelectedPane.addTeam(label.getText(),img, button, label);
 				}
 				
-			});
-			
-			
-			
+			});		
 			
 			hbox.getChildren().addAll(button, label, imgView);
 			tilePane.getChildren().add(hbox);
+			// test property write
+			// PropData.writeProp(name[0].replace(" ", "_"), nation);
 			
 		} // for loop
 	}
@@ -111,6 +111,7 @@ public class LeagueTab {
 		// scroll panel setup
 		scrPane.setContent(tilePane);
 		scrPane.setFitToWidth(true);
+		scrPane.getStyleClass().add("body-style");
 		
 		tab.setContent(scrPane);
 		return tab;
