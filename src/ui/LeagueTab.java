@@ -101,8 +101,11 @@ public class LeagueTab {
 			
 			hbox.getChildren().addAll(button, label, imgView);
 			tilePane.getChildren().add(hbox);
+			
 			// test property write
 			// PropData.writeProp(name[0].replace(" ", "_"), nation);
+			// String val = PropData.readProp(name[0].replace(" ", "_"));
+			// System.out.println(val);
 			
 		} // for loop
 	}

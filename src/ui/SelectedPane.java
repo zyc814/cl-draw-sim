@@ -62,6 +62,7 @@ public class SelectedPane {
 		label.getStyleClass().add("teambox-label");
 		label.setPrefWidth(200);
 		final HBox hbox = new HBox();
+		hbox.setId(name);
 		hbox.setSpacing(10);
 		//hbox.setPadding(new Insets(5));
 		hbox.getStyleClass().add("teambox-style");
