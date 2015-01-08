@@ -78,6 +78,7 @@ public class Start extends Application {
 		root.setRight(null);
 		root.setCenter(groupPane.getVisual());
 		Draw.loadSelectedPane();
+		Draw.displayDraw();
 	}
 
 }

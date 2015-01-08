@@ -94,7 +94,7 @@ public class LeagueTab {
 					button.setDisable(true);
 					label.setDisable(true);
 					SelectedPane.label.setText("Selected Teams: " + ++SelectedPane.count);
-					SelectedPane.addTeam(label.getText(),img, button, label);
+					SelectedPane.addTeam(label.getText(), nation, img, button, label);
 				}
 				
 			});		

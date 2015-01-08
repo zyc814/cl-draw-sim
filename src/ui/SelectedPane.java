@@ -55,14 +55,14 @@ public class SelectedPane {
 		return visual;
 	}
 	
-	public static void addTeam(String name, Image img, final Button btn, final Label lbl) {
+	public static void addTeam(String name, String nation, Image img, final Button btn, final Label lbl) {
 		// build team box
 		final Button button = new Button("-");
 		final Label label = new Label(name);
 		label.getStyleClass().add("teambox-label");
 		label.setPrefWidth(200);
 		final HBox hbox = new HBox();
-		hbox.setId(name);
+		hbox.setId(nation + "-" + name);
 		hbox.setSpacing(10);
 		//hbox.setPadding(new Insets(5));
 		hbox.getStyleClass().add("teambox-style");
