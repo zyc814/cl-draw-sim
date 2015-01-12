@@ -16,6 +16,7 @@ public class BottomPane {
 	public Button btnBack = new Button("Back");
 	public Button btnRandom = new Button("Random");
 	public Button btnClear = new Button("Clear");
+	public Button btnRedraw = new Button("Re-Draw");
 	
 	public HBox hbox = new HBox();
 	public HBox hbox2 = new HBox();
