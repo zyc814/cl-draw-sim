@@ -57,7 +57,7 @@ public class Group {
 	
 	public static boolean draw() {
 		
-		// draw class 2 
+		// re-arrange class 2 
 		for (int i=0; i<8; i++) {
 			for (int j=i; j<8; j++) {
 				if (Draw.b.get(i).getNation().equals(Draw.a.get(i).getNation())) {
@@ -72,7 +72,7 @@ public class Group {
 		//System.out.println(c1.toString());
 		//System.out.println(c2.toString());
 		
-		// draw class 3
+		// re-arrange class 3
 		for (int i=0; i<8; i++) {
 			for (int j=i; j<8; j++) {
 				if ( Draw.c.get(i).getNation().equals(Draw.a.get(i).getNation()) || Draw.c.get(i).getNation().equals(Draw.b.get(i).getNation()) ) {
@@ -86,7 +86,7 @@ public class Group {
 		}
 		//System.out.println(c3.toString());
 		
-		// draw class 4
+		// re-arrange class 4
 		for (int i=0; i<8; i++) {
 			for (int j=i; j<8; j++) {
 				if ( Draw.d.get(i).getNation().equals(Draw.a.get(i).getNation()) || Draw.d.get(i).getNation().equals(Draw.b.get(i).getNation()) || Draw.d.get(i).getNation().equals(Draw.c.get(i).getNation()) ) {

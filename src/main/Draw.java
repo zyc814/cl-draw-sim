@@ -63,8 +63,8 @@ public class Draw {
 //		Collections.shuffle(c);
 //		Collections.shuffle(d);	
 		Group.draw();
-		Group.examine();
-		Group.test();
+		//Group.examine();
+		//Group.test();
 	}
 	
 	
