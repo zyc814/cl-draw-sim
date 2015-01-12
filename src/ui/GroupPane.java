@@ -40,7 +40,7 @@ public class GroupPane {
 		gridPane.getStyleClass().add("body-style");
 		gridPane.setHgap(20);
 		gridPane.setVgap(20);
-		gridPane.setPadding(new Insets(20, 15, 0, 15));
+		gridPane.setPadding(new Insets(30, 15, 0, 15));
 		// gridPane.setGridLinesVisible(true);		
 		
 		// test

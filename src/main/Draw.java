@@ -82,6 +82,7 @@ public class Draw {
 		d.clear();
 		for (int i=0; i<8; i++) {
 			GroupPane.groupList.get(i).clear();
+			GroupPane.groupList.get(i).build();
 		}
 	}
 	

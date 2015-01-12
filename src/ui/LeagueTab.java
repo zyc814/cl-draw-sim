@@ -2,7 +2,6 @@ package ui;
 
 import java.io.File;
 
-import main.PropData;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
@@ -95,6 +94,9 @@ public class LeagueTab {
 					label.setDisable(true);
 					SelectedPane.label.setText("Selected Teams: " + ++SelectedPane.count);
 					SelectedPane.addTeam(label.getText(), nation, img, button, label);
+					if (SelectedPane.count == 32) {
+						BottomPane.btnNext.setDisable(false);
+					}
 				}
 				
 			});		

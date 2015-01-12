@@ -19,17 +19,21 @@ public class GroupBox {
 	
 	public GroupBox(String str) {
 		group = str;
-		
-		label.setText("Group " + str);
+		build();
+	}
+	
+	public void build() {
+		label.setText("Group " + group);
 		label.setPrefHeight(30);
 		label.getStyleClass().add("teambox-label");
 		
 		vbox.setPrefWidth(225);
 		vbox.setPrefHeight(200);
 		vbox.setSpacing(5);
-		vbox.setPadding(new Insets(0,10,0,10));
+		vbox.setPadding(new Insets(10,10,10,10));
 		vbox.getChildren().addAll(label,sep);
 		vbox.getStyleClass().add("teambox-style");
+
 	}
 	
 	// insert a team according to nation and name

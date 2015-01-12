@@ -84,6 +84,7 @@ public class SelectedPane {
 				btn.setDisable(false);
 				SelectedPane.label.setText("Selected Teams: " + --count);
 				vbox.getChildren().removeAll(hbox);
+				BottomPane.btnNext.setDisable(true);
 			}
 			
 		});
