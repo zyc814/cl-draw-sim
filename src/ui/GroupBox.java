@@ -38,7 +38,7 @@ public class GroupBox {
 		Label lbl = new Label(name);
 		lbl.getStyleClass().add("teambox-label");
 		// test image path output
-		System.out.println("/" + nation + "/" + name + ".png");		
+		// System.out.println("/" + nation + "/" + name + ".png");		
 		Image img = new Image("/" + nation + "/" + name + ".png");
 		ImageView view = new ImageView(img);
 		view.setPreserveRatio(true);
@@ -48,6 +48,11 @@ public class GroupBox {
 		hbox.setAlignment(Pos.CENTER_LEFT);
 		hbox.getChildren().addAll(view, lbl);
 		vbox.getChildren().add(hbox);
+	}
+	
+	// remove all the contents
+	public void clear() {
+		vbox.getChildren().clear();
 	}
 	
 	public VBox getVisual() {

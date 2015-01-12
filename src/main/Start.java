@@ -77,7 +77,9 @@ public class Start extends Application {
 	public static void onNextBtn() {
 		root.setRight(null);
 		root.setCenter(groupPane.getVisual());
+		Draw.clear();
 		Draw.loadSelectedPane();
+		Draw.shuffle();
 		Draw.displayDraw();
 	}
 

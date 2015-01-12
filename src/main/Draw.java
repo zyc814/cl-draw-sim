@@ -12,10 +12,10 @@ public class Draw {
 	
 	public static ArrayList<Team> teamList = new ArrayList<Team>();
 	
-	public static List<Team> a; 
-	public static List<Team> b;
-	public static List<Team> c;
-	public static List<Team> d; 
+	public static ArrayList<Team> a = new ArrayList<Team>();
+	public static ArrayList<Team> b = new ArrayList<Team>();
+	public static ArrayList<Team> c = new ArrayList<Team>();
+	public static ArrayList<Team> d = new ArrayList<Team>();
 	
 	public static Comparator<Team> cmp = new Comparator<Team>() {
 
@@ -50,27 +50,43 @@ public class Draw {
 //		}
 		
 		int interval = teamList.size()/4; // excepted to be 32/4=8
-		a = teamList.subList(0, interval); // 0-7
-		b = teamList.subList(interval, interval*2); // 8-15
-		c = teamList.subList(interval*2, interval*3); // 16-23
-		d = teamList.subList(interval*3, interval*4); // 24-32
+		List<Team> aa = teamList.subList(0, interval); // 0-7
+		List<Team> bb = teamList.subList(interval, interval*2); // 8-15
+		List<Team> cc = teamList.subList(interval*2, interval*3); // 16-23
+		List<Team> dd = teamList.subList(interval*3, interval*4); // 24-32
+		
+		for (int i=0; i<8; i++) {
+			a.add(aa.get(i));
+			b.add(bb.get(i));
+			c.add(cc.get(i));
+			d.add(dd.get(i));
+		}
 		
 	}
 	
 	public static void shuffle() {
-//		Collections.shuffle(a);
-//		Collections.shuffle(b);
-//		Collections.shuffle(c);
-//		Collections.shuffle(d);	
+		Collections.shuffle(a);
+		Collections.shuffle(b);
+		Collections.shuffle(c);
+		Collections.shuffle(d);		
 		Group.draw();
 		//Group.examine();
 		//Group.test();
 	}
 	
+	public static void clear() {
+		teamList.clear();
+		a.clear();
+		b.clear();
+		c.clear();
+		d.clear();
+		for (int i=0; i<8; i++) {
+			GroupPane.groupList.get(i).clear();
+		}
+	}
 	
 	
 	public static void displayDraw() {
-		shuffle();
 		for (int i=0; i<8; i++) {
 			GroupPane.groupList.get(i).insert(a.get(i).getName(), a.get(i).getFolder());
 			GroupPane.groupList.get(i).insert(b.get(i).getName(), b.get(i).getFolder());

@@ -22,6 +22,7 @@ public class GroupPane {
 	public static ArrayList<GroupBox> groupList = new ArrayList<GroupBox>();
 	
 	public GroupPane() {
+		
 		groupList.add(a);
 		groupList.add(b);
 		groupList.add(c);
