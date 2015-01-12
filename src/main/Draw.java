@@ -5,8 +5,6 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-import javafx.scene.image.ImageView;
-import javafx.scene.layout.HBox;
 import ui.GroupPane;
 import ui.SelectedPane;
 
@@ -36,11 +34,12 @@ public class Draw {
 		for (int i=0; i<size; i++) {
 			String temp = SelectedPane.vbox.getChildren().get(i).getId();
 			String name[] = temp.split("-");
-			String val = PropData.readProp(name[1].replace(" ", "_"));
+			String value = PropData.readProp(name[1].replace(" ", "_")); // value = score-nation
+			String val[] = value.split("-");
 			
-			teamList.add(new Team(name[1], Float.parseFloat(val), name[0]));
+			teamList.add(new Team(name[1], Float.parseFloat(val[0]), val[1], name[0]));
 			// test output
-			// System.out.println(name + "---" + val);
+			// System.out.println(name[1] + "---" + val[0] + "---" + val[1]);
 		}
 		
 		// sort the array list
@@ -59,48 +58,26 @@ public class Draw {
 	}
 	
 	public static void shuffle() {
-		Collections.shuffle(a);
-		Collections.shuffle(b);
-		Collections.shuffle(c);
-		Collections.shuffle(d);	
+//		Collections.shuffle(a);
+//		Collections.shuffle(b);
+//		Collections.shuffle(c);
+//		Collections.shuffle(d);	
+		Group.draw();
+		Group.examine();
+		Group.test();
 	}
+	
+	
 	
 	public static void displayDraw() {
 		shuffle();
 		for (int i=0; i<8; i++) {
-			GroupPane.groupList.get(i).insert(a.get(i).getName(), a.get(i).getNation());
-			GroupPane.groupList.get(i).insert(b.get(i).getName(), b.get(i).getNation());
-			GroupPane.groupList.get(i).insert(c.get(i).getName(), c.get(i).getNation());
-			GroupPane.groupList.get(i).insert(d.get(i).getName(), d.get(i).getNation());
+			GroupPane.groupList.get(i).insert(a.get(i).getName(), a.get(i).getFolder());
+			GroupPane.groupList.get(i).insert(b.get(i).getName(), b.get(i).getFolder());
+			GroupPane.groupList.get(i).insert(c.get(i).getName(), c.get(i).getFolder());
+			GroupPane.groupList.get(i).insert(d.get(i).getName(), d.get(i).getFolder());
 		}
 	}
 
 
-}
-
-
-class Team {
-	
-	public String name;
-	public float credit;
-	public String nation;
-	
-	
-	public Team(String str1, float n, String str2) {
-		name = str1;
-		credit = n;
-		nation = str2;
-	}
-	
-	public String getName() {
-		return name;
-	}
-	
-	public float getCredit() {
-		return credit;
-	}
-	
-	public String getNation() {
-		return nation;
-	}
 }

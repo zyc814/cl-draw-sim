@@ -37,6 +37,8 @@ public class GroupBox {
 		HBox hbox = new HBox();
 		Label lbl = new Label(name);
 		lbl.getStyleClass().add("teambox-label");
+		// test image path output
+		System.out.println("/" + nation + "/" + name + ".png");		
 		Image img = new Image("/" + nation + "/" + name + ".png");
 		ImageView view = new ImageView(img);
 		view.setPreserveRatio(true);
