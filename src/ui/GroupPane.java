@@ -38,7 +38,7 @@ public class GroupPane {
 	public void build() {
 		
 		gridPane.getStyleClass().add("body-style");
-		gridPane.setHgap(20);
+		gridPane.setHgap(10);
 		gridPane.setVgap(20);
 		gridPane.setPadding(new Insets(30, 15, 0, 15));
 		// gridPane.setGridLinesVisible(true);		
